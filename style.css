@@ -1,0 +1,1075 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14.5px;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  padding: 0 24px;
+  margin: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#scrollUpButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+  background-color: #ffc600;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#scrollUpButton:hover {
+  background-color: #be9e2a;
+}
+
+#scrollUpButton.show {
+  opacity: 1;
+}
+
+.gmail_menu {
+  color: #fff;
+  position: absolute;
+  right: 100px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  top: 10px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: all 1s ease 1s;
+}
+
+.dropdown .student a:hover,
+.dropdown .reach a:hover,
+.dropdown .lasu a:hover,
+.dropdown .admin_principal a:hover,
+.faculties_direct .dropdown_content .menu a:hover,
+.academic_research .dropdown_content .menu a:hover,
+.students .dropdown_content .menu a:hover {
+  color: rgb(0, 115, 173);
+}
+
+.first_menu .color_bar {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    rgb(160, 99, 6),
+    rgb(160, 99, 6),
+    rgb(172, 106, 6),
+    rgb(221, 137, 8),
+    rgb(197, 121, 7) 60%
+  );
+}
+
+.first_menu .first_nav_bar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 700px;
+  height: 70px;
+  padding: 25px 20px 20px;
+  background: linear-gradient(
+    rgb(158, 24, 21),
+    rgb(203, 31, 26),
+    rgb(232, 79, 74),
+    #e53c37 50%
+  );
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 23%;
+  z-index: 1000;
+}
+
+.first_menu .first_nav_bar li a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  padding-right: 10px;
+  border-right: 2px solid #fff;
+  color: #fff;
+  transition: all ease-in-out 1s;
+}
+
+.first_menu .first_nav_bar li .none_border {
+  border-right: none;
+}
+
+.first_menu .first_nav_bar li a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.staff .dropdown_content .menu {
+  background-color: #f6f6f6;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+}
+
+.second_menu {
+  padding: 20px 20px 10px;
+  background-color: #fff;
+  width: 100%;
+  z-index: 999;
+  transition: all 1s ease;
+  position: -webkit-sticky;
+  position: relative;
+  top: -1px;
+}
+
+.second_menu_logo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.second_menu img {
+  width: 150px;
+  height: 40px;
+}
+
+.second_menu .second_nav_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.second_menu .second_nav_bar li .main_link {
+  color: rgb(0, 0, 0);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.second_menu .second_nav_bar li .main_link:hover {
+  color: rgb(0, 115, 173);
+  transition: all ease 1s;
+  font-weight: 700;
+  transition: all ease 2s;
+}
+
+.second_menu .second_nav_bar li:hover .main_link::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  border-bottom: 2px solid rgb(0, 115, 173);
+  position: absolute;
+  bottom: 0;
+}
+
+.search_link {
+  cursor: pointer;
+}
+
+.second_menu.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.secondII_nav_bar{
+  background: #fff;
+  width: 100%;
+  top: 130px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.menu_icon{
+  font-size: 30px;
+  cursor: pointer;
+  display:none;
+}
+
+.second_search{
+  display: none;
+}
+
+.menu_icon i{
+  transition: all ease 0.7s;
+  padding: 10px;
+}
+
+.menu_icon i:hover{
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.secondII_nav_bar .exist_icon{
+  font-size: 30px;
+  text-align: right;
+  cursor: pointer;
+  padding: 0;
+}
+
+.secondII_nav_bar .exist_icon i{
+  transition: all ease 0.7s;
+  padding: 10px;
+}
+.secondII_nav_bar .exist_icon i:hover{
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.secondII_nav_bar ul li a {
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+.secondII_nav_bar ul li{
+  border-bottom: 2px solid #000;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.secondII_nav_bar ul li:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+.reach .dropdown_content .menu {
+  background-color: #283e3e;
+  min-width: 170px;
+  color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+}
+
+.reach .dropdown_content .menu li a {
+  color: #fff;
+}
+
+.reach .dropdown_content .menu li a:hover {
+  color: rgb(0, 115, 173);
+}
+
+.search_link a {
+  color: #000;
+}
+
+.search_link a:hover {
+  color: #286090;
+}
+
+.dropdown_content li {
+  padding-bottom: 10px;
+}
+
+.staff .dropdown_content li a {
+  color: #000;
+  padding-right: 0;
+  border-right: none;
+  transition: all ease-in-out 0.5s;
+}
+
+.staff .dropdown_content li a:hover {
+  color: #8f221e;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.the_university_dropdown .dropdown_content,
+.faculties_direct .dropdown_content {
+  left: -400px;
+  top: 16px;
+  transition: all ease-in-out 5s;
+  padding: 20px;
+}
+
+.faculties_direct .dropdown_content {
+  left: -500px;
+}
+
+.reach .dropdown_content {
+  right: -100px;
+}
+
+.students .dropdown_content {
+  left: -600px;
+}
+
+.academic_research .dropdown_content {
+  right: -300px;
+}
+
+/* students */
+
+.the_university_dropdown .dropdown_content .menu,
+.faculties_direct .dropdown_content .menu,
+.academic_research .dropdown_content .menu,
+.students .dropdown_content .menu {
+  grid-template-columns: 1fr repeat(2, 200px);
+  display: grid;
+  background-color: #283e3e;
+  gap: 25px;
+  color: #fff;
+  min-width: 900px;
+  padding: 40px;
+}
+
+.faculties_direct .dropdown_content .menu,
+.students .dropdown_content .menu {
+  grid-template-columns: repeat(4, 1fr);
+}
+.academic_research .dropdown_content .menu {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dropdown_content .heading h3 {
+  color: #ffe0b3;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.dropdown_content .heading h3::before {
+  content: "";
+  width: 30px;
+  height: 3px;
+  border-bottom: 1px solid #ffe0b3;
+  position: absolute;
+  bottom: 0;
+}
+
+.dropdown_content .about p {
+  text-align: justify;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+}
+
+.dropdown .about .read,
+.dropdown .directorates .all_directs {
+  margin-top: 20px;
+  background-color: rgb(0, 115, 173);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dropdown .about .read:hover,
+.dropdown .directorates .all_directs:hover {
+  background-color: #286090;
+  color: #66ccff;
+}
+
+.dropdown .course_reg,
+.dropdown .lasu,
+.dropdown .journal,
+.dropdown .a-z,
+.dropdown .admin_principal,
+.dropdown .schools_admin,
+.dropdown .vc_office,
+.dropdown .directorates {
+  position: relative;
+  padding-left: 10px;
+}
+
+.dropdown .course_reg::before,
+.dropdown .lasu::before,
+.dropdown .a-z::before,
+.dropdown .journal::before,
+.dropdown .admin_principal::before,
+.dropdown .schools_admin::before,
+.dropdown .vc_office::before,
+.dropdown .directorates::before {
+  content: "";
+  left: 0;
+  top: 5px;
+  height: 230px;
+  border-left: 1px solid #ffe0b3;
+  position: absolute;
+}
+
+.dropdown .bulletin a,
+.dropdown .a-z a,
+.dropdown .journal a,
+.dropdown .student a,
+.dropdown .course_reg a,
+.dropdown .lasu a,
+.dropdown .admin_principal a,
+.faculties_direct .dropdown_content .menu a {
+  color: #fff;
+  font-size: 17px;
+}
+
+.dropdown .admin_principal::before {
+  height: 380px;
+}
+
+.dropdown .a-z::before {
+  height: 450px;
+}
+
+.dropdown .schools_admin::before {
+  height: 350px;
+}
+
+.dropdown .directorates::before {
+  height: 340px;
+}
+
+.dropdown .course_reg::before,
+.dropdown .journal::before {
+  height: 490px;
+}
+
+.dropdown .new_app::before {
+  height: 500px;
+}
+
+.dropdown .pg_lacaca::before {
+  height: 540px;
+}
+
+.dropdown .vc_office::before {
+  height: 330px;
+}
+
+.yellow_grain {
+  color: #ffe0b3;
+  margin-top: 30px;
+}
+
+.hero_section img {
+  width: 100%;
+  height: 150%;
+}
+
+.second_menu_logo .menu_icon {
+  display: none;
+}
+
+.greater_arrow,
+.less_arrow {
+  padding: 20px 25px;
+  color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: #e2231d;
+  left: 15px;
+  cursor: pointer;
+  transition: all ease-in-out 1s;
+}
+
+.greater_arrow:hover,
+.less_arrow:hover {
+  background-color: rgb(0, 115, 173);
+}
+
+.greater_arrow {
+  display: none;
+  top: 450px;
+}
+
+.less_arrow {
+  display: none;
+  top: 360px;
+}
+
+.news_section .heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news_section .heading .news,
+.news_section .heading .events {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Comic Neue", cursive;
+}
+
+.news_section .heading .news h2,
+.news_section .heading .events h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.news_section .heading .news p,
+.news_section .heading .events p {
+  padding-left: 10px;
+  border-left: 2px solid #6b6b6b;
+  color: #e2231d;
+  font-weight: 700;
+}
+
+/* 300x200 */
+
+.news_box {
+  margin-top: 24px;
+  /* max-width: 300px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.news_box .box_one {
+  width: 300px;
+  position: relative;
+  background-color: #f6f6f6;
+}
+
+.news_box .box_one img {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  transition: all ease-in-out 2s;
+  z-index: 0;
+}
+
+.news_box .box_one img:hover {
+  transform: scale(1.13);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.calender {
+  background: #0051cc;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  height: 70px;
+  left: 0;
+  top: 133px;
+  line-height: 25px;
+  padding-top: 11px;
+  position: absolute;
+  width: 70px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.calender .number {
+  /* width: 100%; */
+  padding: 5px;
+  font-weight: 800;
+  font-size: 28px;
+  text-align: center;
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.calender::before {
+  content: "Oct";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.news_box .text_content {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  padding: 15px;
+  background-color: #f6f6f6;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  z-index: 4;
+  height: 160px;
+}
+
+.news_box .text_content a {
+  color: #000;
+  transition: all ease-out 1s;
+}
+
+.news_box .text_content a:hover {
+  color: #0051cc;
+}
+
+.text_content .middle_text {
+  color: #696969;
+  display: block;
+  text-align: center;
+}
+
+.box_two {
+  width: 300px;
+}
+
+.event {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.event img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.event .event_text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.event .event_text_container a {
+  color: #000;
+}
+
+.event .event_text_container a:hover {
+  color: #0051cc;
+}
+
+.event .event_text_container span {
+  display: block;
+}
+
+.discovery_section {
+  background-color: #e6e6e6;
+  padding: 60px 20px;
+}
+
+.admission .heading,
+.discovery_section .heading,
+.vision .heading {
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+}
+
+.admission .heading h4,
+.discovery_section .heading h4,
+.vision .heading h4 {
+  color: #e2231d;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.admission .heading h4::before,
+.discovery_section .heading h4::before,
+.vision .heading h4::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  border-bottom: 2px solid #ffc600;
+  bottom: 0;
+}
+
+.admission .heading h2,
+.discovery_section .heading h2,
+.vision .heading h2 {
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.discovery_section .main {
+  display: flex;
+  gap: 24px;
+}
+
+.main .left_side {
+  max-height: 360px;
+  width: 500px;
+  overflow-x: hidden;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+.left_side .box {
+  width: 50%;
+  position: relative;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.left_side .box .mini_box {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.box .mini_box .img {
+  padding-bottom: 5px;
+}
+
+.mini_box .img img {
+  width: 80px;
+}
+
+.mini_box h4 {
+  color: #000;
+  font-size: 18px;
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.mini_box span {
+  font-size: 11px;
+}
+
+.main .right_side {
+  width: 59%;
+}
+
+.main .right_side .vc_welcome {
+  background: url(images/vc_banner_new.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  color: #fff;
+  padding: 65px 20px 80px 30px;
+  position: relative;
+  z-index: 0;
+}
+
+.right_side .vc_welcome .heading {
+  font-family: "Comic Neue", cursive;
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+  z-index: 5;
+}
+
+.right_side .vc_welcome .greeting {
+  position: relative;
+  text-align: justify;
+  line-height: 25px;
+  padding-right: 135px;
+  z-index: 5;
+}
+
+.right_side .vc_welcome .greeting .quote {
+  color: #ffc600;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.right_side .vc_welcome .greeting h4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.right_side .vc_welcome .vc_image {
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+}
+
+.right_side .vc_welcome .vc_image img {
+  width: 250px;
+  z-index: 0;
+}
+
+.vision .main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.vision .main .box {
+  display: flex;
+  gap: 20px;
+  border: 2px solid #eef0f8;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 20px;
+  transition: all ease 2s;
+}
+
+.vision .main .box:hover {
+  rotate: 15deg;
+  transform-origin: right left;
+}
+
+.vision .main .left {
+  margin: 0 20px;
+}
+
+.vision .main .box .img img {
+  width: 60px;
+}
+
+.vision .main .box .content h4 {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.vision .main .box .content p {
+  line-height: 1.5;
+}
+
+.vision .main .index {
+  z-index: 3;
+}
+
+.social {
+  background-color: #9c470c;
+  position: relative;
+}
+
+.social .heading {
+  background: linear-gradient(
+    #9e1815,
+    #cb1f1b,
+    #e84f4a,
+    #e53c37,
+    #e53c37,
+    #e53c37,
+    #e53c37,
+    #e53c37,
+    #e53c37
+  );
+  padding: 28px 20px;
+  font-family: "Comic Neue", cursive;
+  width: 50%;
+  height: 100px;
+  border-radius: 0 60px 0 0;
+  position: absolute;
+  top: -21px;
+}
+
+.social .heading h2 {
+  color: #fff;
+  font-size: 32px;
+}
+
+.social .heading h4 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.social .main {
+  padding: 160px 80px 60px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.social .main .youtube,
+.social .main .facebook,
+.social .main .radio {
+  padding: 30px;
+  background-color: #cb1f1b;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  position: relative;
+  height: 350px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.social .main .facebook{
+  height: 550px;
+}
+
+.social .main .youtube .mini,
+.social .main .facebook .mini,
+.social .main .radio .mini {
+  background: url(images/social_bg.png) no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.radio .radio_image img {
+  padding: 25px 25px 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.facebook_image{
+  width: 100%;
+}
+
+.facebook_image img{
+  width: 50%;
+}
+
+.youtube h3 {
+  color: #fff;
+  font-size: 17px;
+  padding: 20px 0 0;
+}
+
+.facebook_page,
+.youtube_page {
+  margin: 0 auto;
+  width: 300px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.facebook_page{
+  padding: 0;
+}
+
+
+.youtube a {
+  color: #fff;
+  background-color: red;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.admission .main {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.admission .main .image {
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.admission .image img {
+  width: 280px;
+  border-radius: 6px;
+  transition: all ease 0.6s;
+  cursor: pointer;
+}
+
+.admission .image img:hover {
+  transform: scale(1.08);
+}
+
+.section_footer {
+  background-color: #311e02;
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+.footer_section .heading {
+  text-align: center;
+}
+
+.footer_section .heading h3 {
+  font-weight: 700;
+}
+
+.footer_section .heading .counters {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 30px;
+  margin-top: 30px;
+}
+
+.footer_section .heading .counters h4 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.footer_section .heading .counters h3 {
+  padding: 5px 10px;
+  background-color: #000;
+  color: #ffc600;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.footer_section .main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #fff;
+  text-align: justify;
+  line-height: 22px;
+}
+
+.footer_section .main .logo {
+  margin-bottom: 20px;
+}
+
+.footer_section .main .icon {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.footer_section .main a {
+  color: #fff;
+  line-height: 1.7;
+}
+
+.footer_section .main a:hover {
+  color: #0051cc;
+}
+
+.footer_section .main h3 {
+  margin: 10px 0;
+}
+
+.footer_section .main .mb {
+  margin: 10px 0;
+}
+
+footer {
+  background-color: #ac6a06;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}

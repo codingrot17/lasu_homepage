@@ -1,0 +1,289 @@
+@media screen and (max-width: 1350px) {
+  .gmail_menu {
+    display: none;
+  }
+  .greater_arrow {
+    top: 410px;
+  }
+  .less_arrow {
+    top: 340px;
+  }
+  .news_box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .social .main {
+    padding: 160px 50px 60px;
+    display: flex;
+    margin: 0 auto;
+  }
+  .admission .main {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .discovery_section .main {
+    display: grid;
+    gap: 130px;
+  }
+  .main .left_side {
+    width: 100%;
+  }
+  .main .right_side {
+    width: 100%;
+  }
+  .second_menu_logo #menuIcon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .vision .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    gap: 30px;
+  }
+  .social .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .second_menu .second_nav_bar {
+    gap: 10px;
+  }
+  .second_menu_logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .second_menu_logo #menuIcon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .first_menu .first_nav_bar {
+    left: 100px;
+  }
+  .greater_arrow {
+    top: 370px;
+    left: 0;
+  }
+  .less_arrow {
+    top: 370px;
+    right: 0;
+  }
+  .news_box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .social .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .admission .main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .second_menu_logo {
+    max-width: 900px;
+    justify-content: space-around;
+  }
+  .second_menu_logo #menuIcon {
+    display: block;
+  }
+  .second_menu .second_nav_bar {
+    display: none;
+    padding: 5px;
+  }
+  .second_search {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .first_menu .first_nav_bar {
+    width: 500px;
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer_section .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer_section .lasu_history{
+    grid-area: span 1 / span 3;
+  }
+  .vision .main {
+    grid-template-columns: 1fr;
+  }
+  .vision .main .box:hover {
+    rotate: 5deg;
+    transform-origin: right left;
+  }
+  .social .heading {
+    padding: 28px 20px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .news_box {
+    grid-template-columns: 1fr;
+  }
+  .news_box .box_one {
+    width: 100%;
+  }
+  .news_box .box_one img {
+    transition: all ease-in-out 1s;
+  }
+  .news_box .box_one img:hover {
+    transform: scale(1.05);
+  }
+  .event {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .first_menu .first_nav_bar {
+    width: 450px;
+    left: 60px;
+  }
+  .social .heading h2 {
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .social .heading h4 {
+    color: #fff;
+    font-size: 17px;
+  }
+  .news_section .heading .news h2,
+  .news_section .heading .events h2 {
+    font-size: 20px;
+  }
+  .second_menu_logo {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search_link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social .main .youtube,
+  .social .main .facebook,
+  .social .main .radio {
+    width: 100%;
+  }
+  .radio .radio_image img {
+    padding: 0px;
+    height: 100%;
+  }
+  .footer_section .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer_section .lasu_history{
+    grid-area: span 1 / span 2;
+  }
+}
+@media screen and (max-width: 500px) {
+  .first_menu .first_nav_bar li a {
+    font-weight: 500;
+    padding-right: 5px;
+  }
+  .right_side .vc_welcome .greeting {
+    padding-right: 50px;
+    z-index: 5;
+  }
+  .first_menu .first_nav_bar {
+    width: 100%;
+    left: 0;
+  }
+  .admission .main {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .admission .main .image {
+    margin: 0 auto;
+  }
+  .staff .dropdown_content {
+    left: -10px;
+    top: 10px;
+  }
+  #scrollUpButton {
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  footer {
+    background-color: #ac6a06;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+  }
+  .event {
+    width: 100%;
+    gap: 20px;
+  }
+  .social .main {
+    padding: 160px 10px 60px;
+  }
+  .social .main .youtube,
+  .social .main .facebook,
+  .social .main .radio {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .footer_section .main {
+    grid-template-columns: 1fr;
+  }
+  .footer_section .lasu_history{
+    grid-area: span 1 / span 1;
+  }
+  .news_section .heading .news h2,
+  .news_section .heading .events h2 {
+    font-size: 14px;
+  }
+  .admission .heading h2,
+  .discovery_section .heading h2,
+  .vision .heading h2 {
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  .right_side .vc_welcome .greeting {
+    padding-right: 10px;
+  }
+  .left_side .box {
+    width: 50%;
+    float: none;
+  }
+  .left_side .box {
+    width: 100%;
+    float: none;
+  }
+  .social .main .radio {
+    height: 269px;
+  }
+}
