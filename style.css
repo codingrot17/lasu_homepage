@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@400;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter:wght@400;600;700;800&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -74,7 +74,7 @@ ul {
 }
 
 .dropdown_content {
-  display: none;
+  transform: scaleY(0);
   position: absolute;
   z-index: 1;
   right: 10px;
@@ -82,7 +82,12 @@ ul {
   padding: 20px;
   font-size: 14px;
   line-height: 1.5;
-  transition: all 1s ease 1s;
+  transition: all 0.1s ease-in-out;
+  transform-origin: center top;
+}
+
+.dropdown:hover .dropdown_content {
+  transform: scaleY(1);
 }
 
 .dropdown .student a:hover,
@@ -129,12 +134,12 @@ ul {
 }
 
 .first_menu .first_nav_bar li a {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
   padding-right: 10px;
   border-right: 2px solid #fff;
   color: #fff;
-  transition: all ease-in-out 1s;
+  transition: all ease-in-out 0.4s;
 }
 
 .first_menu .first_nav_bar li .none_border {
@@ -157,7 +162,7 @@ ul {
   background-color: #fff;
   width: 100%;
   z-index: 999;
-  transition: all 1s ease;
+  transition: all 0.4s ease;
   position: -webkit-sticky;
   position: relative;
   top: -1px;
@@ -185,23 +190,31 @@ ul {
 
 .second_menu .second_nav_bar li .main_link {
   color: rgb(0, 0, 0);
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
 }
 .second_menu .second_nav_bar li .main_link:hover {
   color: rgb(0, 115, 173);
-  transition: all ease 1s;
+  transition: all ease 0.4s;
   font-weight: 700;
-  transition: all ease 2s;
 }
 
-.second_menu .second_nav_bar li:hover .main_link::before {
+.second_menu .second_nav_bar li .main_link::after {
   content: "";
   width: 30px;
-  height: 3px;
-  border-bottom: 2px solid rgb(0, 115, 173);
+  height: 2px;
   position: absolute;
-  bottom: 0;
+  top: 20px;
+  left: 0;
+  background-color: rgb(45, 73, 117);
+  z-index: 20;
+  transform-origin: left center;
+  transition: transform 0.4s ease 0s;
+  transform: scaleX(0);
+}
+
+.second_menu .second_nav_bar li:hover .main_link::after {
+  transform: scaleX(1);
 }
 
 .search_link {
@@ -215,7 +228,7 @@ ul {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.secondII_nav_bar{
+.secondII_nav_bar {
   background: #fff;
   width: 100%;
   top: 130px;
@@ -225,48 +238,48 @@ ul {
   padding-top: 20px;
 }
 
-.menu_icon{
+.menu_icon {
   font-size: 30px;
   cursor: pointer;
-  display:none;
-}
-
-.second_search{
   display: none;
 }
 
-.menu_icon i{
+.second_search {
+  display: none;
+}
+
+.menu_icon i {
   transition: all ease 0.7s;
   padding: 10px;
 }
 
-.menu_icon i:hover{
+.menu_icon i:hover {
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.secondII_nav_bar .exist_icon{
+.secondII_nav_bar .exist_icon {
   font-size: 30px;
   text-align: right;
   cursor: pointer;
   padding: 0;
 }
 
-.secondII_nav_bar .exist_icon i{
+.secondII_nav_bar .exist_icon i {
   transition: all ease 0.7s;
   padding: 10px;
 }
-.secondII_nav_bar .exist_icon i:hover{
+.secondII_nav_bar .exist_icon i:hover {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
 .secondII_nav_bar ul li a {
   color: #000;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-.secondII_nav_bar ul li{
+.secondII_nav_bar ul li {
   border-bottom: 2px solid #000;
   padding: 20px;
   cursor: pointer;
@@ -275,7 +288,6 @@ ul {
 .secondII_nav_bar ul li:hover {
   background: rgba(0, 0, 0, 0.5);
 }
-
 
 .reach .dropdown_content .menu {
   background-color: #283e3e;
@@ -316,15 +328,11 @@ ul {
   color: #8f221e;
 }
 
-.dropdown:hover .dropdown_content {
-  display: block;
-}
-
 .the_university_dropdown .dropdown_content,
 .faculties_direct .dropdown_content {
   left: -400px;
   top: 16px;
-  transition: all ease-in-out 5s;
+  transition: all ease-in-out 0.7s;
   padding: 20px;
 }
 
@@ -334,14 +342,17 @@ ul {
 
 .reach .dropdown_content {
   right: -100px;
+  transition: all ease-in-out 0.7s;
 }
 
 .students .dropdown_content {
   left: -600px;
+  transition: all ease-in-out 0.7s;
 }
 
 .academic_research .dropdown_content {
   right: -300px;
+  transition: all ease-in-out 0.7s;
 }
 
 /* students */
@@ -374,7 +385,7 @@ ul {
 }
 
 .dropdown_content .heading h3::before {
-  content: "";
+  content: '';
   width: 30px;
   height: 3px;
   border-bottom: 1px solid #ffe0b3;
@@ -384,7 +395,7 @@ ul {
 
 .dropdown_content .about p {
   text-align: justify;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
 }
 
@@ -425,7 +436,7 @@ ul {
 .dropdown .schools_admin::before,
 .dropdown .vc_office::before,
 .dropdown .directorates::before {
-  content: "";
+  content: '';
   left: 0;
   top: 5px;
   height: 230px;
@@ -530,7 +541,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: "Comic Neue", cursive;
+  font-family: 'Comic Neue', cursive;
 }
 
 .news_section .heading .news h2,
@@ -579,7 +590,7 @@ ul {
 .calender {
   background: #0051cc;
   color: #ffffff;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 18px;
   height: 70px;
@@ -604,7 +615,7 @@ ul {
 }
 
 .calender::before {
-  content: "Oct";
+  content: 'Oct';
   position: absolute;
   bottom: 0;
   left: 20px;
@@ -612,7 +623,7 @@ ul {
 
 .news_box .text_content {
   position: relative;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   padding: 15px;
   background-color: #f6f6f6;
@@ -680,7 +691,7 @@ ul {
 .admission .heading,
 .discovery_section .heading,
 .vision .heading {
-  font-family: "Comic Neue", cursive;
+  font-family: 'Comic Neue', cursive;
   font-weight: 700;
 }
 
@@ -695,7 +706,7 @@ ul {
 .admission .heading h4::before,
 .discovery_section .heading h4::before,
 .vision .heading h4::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 35px;
   border-bottom: 2px solid #ffc600;
@@ -751,7 +762,7 @@ ul {
 .mini_box h4 {
   color: #000;
   font-size: 18px;
-  font-family: "Comic Neue", cursive;
+  font-family: 'Comic Neue', cursive;
   font-weight: 700;
   margin-bottom: 5px;
 }
@@ -775,7 +786,7 @@ ul {
 }
 
 .right_side .vc_welcome .heading {
-  font-family: "Comic Neue", cursive;
+  font-family: 'Comic Neue', cursive;
   font-size: 32px;
   font-weight: 700;
   position: relative;
@@ -845,7 +856,7 @@ ul {
 
 .vision .main .box .content h4 {
   font-size: 18px;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -876,7 +887,7 @@ ul {
     #e53c37
   );
   padding: 28px 20px;
-  font-family: "Comic Neue", cursive;
+  font-family: 'Comic Neue', cursive;
   width: 50%;
   height: 100px;
   border-radius: 0 60px 0 0;
@@ -913,7 +924,7 @@ ul {
   margin: 0 auto;
 }
 
-.social .main .facebook{
+.social .main .facebook {
   height: 550px;
 }
 
@@ -931,11 +942,11 @@ ul {
   height: 100%;
 }
 
-.facebook_image{
+.facebook_image {
   width: 100%;
 }
 
-.facebook_image img{
+.facebook_image img {
   width: 50%;
 }
 
@@ -953,10 +964,9 @@ ul {
   text-align: center;
 }
 
-.facebook_page{
+.facebook_page {
   padding: 0;
 }
-
 
 .youtube a {
   color: #fff;
@@ -1023,7 +1033,7 @@ ul {
   padding: 5px 10px;
   background-color: #000;
   color: #ffc600;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-weight: 800;
 }
